@@ -1,0 +1,17 @@
+                            Error Handling
+
+> Ansible normally has defaults that make sure to check the return codes of command/modules and it fails if return code is non-zero
+> If the current task fails then playbook will stop the executing remaining tasks on the host.
+> so for this situation we have to ignore errors
+
+USE OPTION :- ignore_errors: yes
+
+# We can wantedly fail a task even if it is not going to fail.
+
+USE OPTION :- failed_when 
+example:- 
+- command: "ls /homee" 
+       register: home_out
+       failed_when: home_out.rc==0
+
+# We can wantedly fail a task with some message also

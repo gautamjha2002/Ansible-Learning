@@ -1,0 +1,11 @@
+---
+ - name : practice on airthmetic operators
+   hosts: localhost
+   vars:
+    x: 45
+    y: "{{x+5}}"
+   tasks:
+   - debug:
+       msg:
+       - "The value of x is: {{x}}"
+       - "The value of y is: {{y}}"

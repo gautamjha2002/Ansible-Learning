@@ -1,0 +1,11 @@
+# Generally we will represent variiable in yaml as a key value pair representation as follows.
+# We have vars section in ansible playbook to deine variable
+# 
+#
+# > key: value
+# > x: 23
+# > y: 34.6
+# This is also called as SCALAR representation of data.
+
+# NOTE:- Ansible Variable names should be letters, numbers, underscores and they should always start with a letter.
+

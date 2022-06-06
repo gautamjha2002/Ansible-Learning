@@ -1,0 +1,14 @@
+---
+ - name : practice on airthmetic operators
+   hosts: localhost
+   gather_facts: false
+   tasks:
+   - debug:
+       msg:
+       - "The value of x is: {{x}}"
+       - "The value of y is: {{y}}"
+       - "Sum of {{x}} and {{y}} is :- {{x + y}}"
+
+# To define variable through command line use -e option
+
+# for example:- ansible-playbook 5_variables_through_commandline.yml -e "x=45 y=78"

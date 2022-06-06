@@ -1,0 +1,13 @@
+> Handlers are just like regular tasks in ansible playbook
+> used when if we want to execute second task only if the first task is changed
+> for handlers we need to use handlers section
+> handlers section do not execute by it self we need to call it
+> to call the handlers we have to se notify in task section
+> Example :-
+                notify:
+                - start httpd
+           handlers:
+            - name: start httpd
+              service:
+              name: httpd
+               state: started

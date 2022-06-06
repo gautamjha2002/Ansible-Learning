@@ -1,0 +1,14 @@
+---
+ - hosts: all
+   gather_facts: true
+   tasks:
+     - block:
+       - name: Finding files in /home/ansibleuser/tomcat8"
+         command: "ls /home/ansibleuser/tomcat8"
+         register: tomcat8_out
+       rescue: 
+          - debug:
+               msg: "Given path: is not valid!!!"
+       always:
+          - debug:
+              msg: "This will always executes"        

@@ -1,0 +1,11 @@
+                Filters and Methods of Ansible Playbook
+
+> Ansible has a lot of way to manipulate variables and their content
+> These filters and methods are used to perform some operations on variables
+
+ 
+* Ansible inbuilt Filters (Jinja2 Filters)
+* Python Methods
+
+> Use | (pipe) for inbuilt/Jinja2 Filters
+> Use . For Python Methods

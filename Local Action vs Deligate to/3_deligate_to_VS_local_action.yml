@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   gather_facts: false
+   tasks:
+     - shell: 'uptime'
+       register: up_time
+       deligate_to: localhost
+     - debug: var=up_time

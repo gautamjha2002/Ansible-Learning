@@ -1,0 +1,20 @@
+---
+ - hosts: all
+   gather_facts: false
+   vars:
+    x: 23
+    num: 45.83
+    my_name: "Gautam Jha"
+    my_boolean: false
+   tasks:
+   - debug: 
+      msg:
+       - "The value of x is {{x}}"
+       - "The value of num is {{num}}"
+       - "The value of my_num is {{my_name}}"
+       - "Boolean value is {{my_boolean}}"
+       - "Type of the variables................................................................."
+       - "The type of x variable is {{x|type_debug}}"
+       - "The type of num variable is {{num|type_debug}}"
+       - "The type of my_num  variable is {{my_name|type_debug}}"
+       - "The type of my_boolean variable is {{my_boolean|type_debug}}"

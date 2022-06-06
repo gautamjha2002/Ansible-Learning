@@ -1,0 +1,18 @@
+---
+ - name: Play for airthmetic operators
+   hosts: all
+   gather_facts: false
+   vars:
+     x: 56
+     y: 34
+   tasks: 
+   - name: Displaying values
+     debug:
+      msg:
+      - "The value of x is :- {{x}}" # this curly braces is called jinja syntax
+      - "The value of y is :- {{y}}"
+      - "{{x}} + {{y}} = {{x+y}}" # Addiion
+      - "{{x}} - {{y}} = {{x-y}}" # Subtraction
+      - "{{x}} * {{y}} = {{x*y}}" # Multiplication
+      - "{{x}} / {{y}} = {{x/y}}" # Division
+      - "{{x}} % {{y}} = {{x%y}}" # Reminder

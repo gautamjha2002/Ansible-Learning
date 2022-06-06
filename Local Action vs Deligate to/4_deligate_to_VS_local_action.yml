@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   gather_facts: false
+   tasks:
+     - local_action: shell 'uptime' # just same as deligate to task will be performd on local host only
+       register: up_time
+       #deligate_to: localhost
+     - debug: var=up_time

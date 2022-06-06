@@ -1,0 +1,11 @@
+                        import vs include
+                    
+> All import* statements are pre-processed at the time of playbooks are parsed
+> All include* statements are processed as they encountered during the execution of the playbook
+
+> So import is static and include is dynamic.
+
+Ansible has following modules for import and include
+    * import_playbook, import_tasks, import_vars, impot_role
+    * include_playbook, include_tasks, include_vars, include_role
+    

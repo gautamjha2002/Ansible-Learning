@@ -1,0 +1,41 @@
+---
+ - name: play with 5 task
+   hosts: localhost
+   gather_facts: false
+   tasks:
+     - debug:
+          msg: "This is first task"
+       tags: 
+         - first
+         - common
+         - always
+     - debug:
+          msg: "This is Second task"
+       tags: 
+         - Second
+         - never
+     - debug:
+          msg: "This is Third task"
+       tags: 
+         - Third
+         - common
+         - never
+     - debug:
+          msg: "This is Forth task"
+       tags: 
+         - Forth
+         - never
+     - debug:
+          msg: "This is Fifth task"
+       tags: 
+         - Fifth
+         - never
+
+
+# to run required task with tags we have to use --tags tagname while running ansible playbook
+# or we can use -t also
+
+# we can just skip our any of the task
+# we have to use --skip-tags
+
+# we can also give one tag to two task.

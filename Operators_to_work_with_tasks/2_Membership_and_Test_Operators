@@ -1,0 +1,6 @@
+                    Membership and Test Operators of Ansible Playbookss
+> The result is either True or false
+
+Membership Operators
+1. in
+2. not in

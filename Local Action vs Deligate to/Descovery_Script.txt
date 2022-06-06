@@ -1,0 +1,11 @@
+ # Usage of delegate_to
+            run_once
+            local_action
+        in Ansible playbook
+
+
+delegate_to is used to run A TASK on a particular server.
+
+run_once is used to run TASK only one time.
+
+local_action is just same as deligate to task will be performd on localhost only.

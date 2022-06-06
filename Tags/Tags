@@ -1,0 +1,21 @@
+Tags are useful to execute / skip requires tasks from number of tasks.
+
+ to run required task with tags we have to use --tags tagname while running ansible playbook
+or we can use -t also
+we can just skip our any of the task
+we have to use --skip-tags
+
+we can also give one tag to two task.
+
+We can list our available tags with
+# ansible-playbook playbook_name --list-tags
+
+
+# NOTE:- there is  tag called      never   whic is used to skip the task
+
+
+if never tag is there we can execute the task by defining explicitly -t tag_name
+
+# NOTE:- There is a tag called   always which is used to execute a task every time wheather we call it or not
+
+when we execute --list-tags those tags with never and never itself do not displayed

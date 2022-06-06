@@ -1,0 +1,13 @@
+                        Conditional Statements
+Thre are 3 types of conditional Statements
+1. when
+2. failed_when
+3. changed_when
+We can club any module with conditional Statements
+
+
+                        when conditional Statements
+> It is like if coonditional statement in other languages.
+> It works or execute any task if condition is true.
+> Condition/expression can be form with comparision, membership, test and logical operators.
+

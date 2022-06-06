@@ -1,0 +1,15 @@
+---
+ - hosts: localhost
+   vars_prompt:
+     - name: username
+       prompt: Enter your user name
+       private: no
+     - name: Password
+       prompt: Enter your Password
+       private: yes
+   gather_facts:  false
+   tasks:
+   - debug:
+       msg:
+        - "Your username is {{username}}"
+        - "Your password is {{Password}}"

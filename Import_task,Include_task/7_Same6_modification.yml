@@ -1,0 +1,12 @@
+---
+ - name: Simple play to install multiple pkgs
+   hosts: all
+   gather_facts: true
+   become: yes
+   tasks:
+     - include_tasks: 2_install_webserver_{{ansible_os_family}}.yml
+     - include_tasks: 4_install_Java_{{ansible_os_family}}.yml
+
+
+# It reduces the number of lines 
+# we can use variable and do not have to use when condition

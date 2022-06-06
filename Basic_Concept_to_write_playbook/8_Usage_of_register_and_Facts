@@ -1,0 +1,13 @@
+                        register
+Ansible module normally return a data structure that can be registered in a variiable
+
+> Ansible registers are used to store the output of a module/task into a variiable.
+
+> We can then use the value of these registers for different scenarios like a conditional statement, logging etc.
+
+
+                        Facts
+Facts are use to store the output of output into a variiable
+> It is dependent on output if the output is there then only the variable is made
+
+> set_fact is used to store the output into variable

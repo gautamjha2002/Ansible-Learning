@@ -1,0 +1,5 @@
+There are three logical operators of ansible playbook
+
+> or
+> and
+> not

@@ -1,0 +1,31 @@
+---
+ - name: Discovery play
+   hosts: all
+   gather_facts: true
+   tasks:
+    - name: Finding OS name
+      shell: "uname"
+      register: os_name
+    - name: Finding uptime
+      shell: "uptime"
+      register: up_time
+    - name: Displaying Discovery info
+      debug:
+         msg: "{{inventory_hostname}}, {{ansible_os_family}},  {{ansible_system}}, {{up_time.stdout.split(',')[0].split('up')}}"
+    - name: Removing old Discovery.csv file 
+      file: 
+        dest: ./Discovery.csv
+        state: absent
+      delegate_to: localhost
+      run_once: yes  
+    - name: Creating  Discovery.csv file with header 
+      copy: 
+        dest: ./Discovery.csv
+        content: "Server_Name, OS Family, OS Name, Up Time\n"
+        delegate_to: localhost
+        run_once: yes 
+    - name: Updating info of each server in csv file  
+      lineinfile: # this module is used to add line in a file
+        path: ./Discovery.csv
+        line: "{{inventory_hostname}}, {{ansible_os_family}},  {{ansible_system}}, {{up_time.stdout.split(',')[0].split('up')}}"
+        delegate_to: localhost

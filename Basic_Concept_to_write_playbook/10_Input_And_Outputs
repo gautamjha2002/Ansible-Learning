@@ -1,0 +1,14 @@
+            Input and output of Ansiblle Playbook
+            How to read and print a variable value
+
+so to read the variable value from command line while running the playbook 
+we have to use 
+vars_prompt      section
+ name: x
+ prompt: message to display while taking variable value
+
+# Note :- while providing the value you will not see the value you are typing on command line. because it is private
+
+So if you want to see the data you are typing then use
+
+private: no

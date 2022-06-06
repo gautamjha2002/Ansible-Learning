@@ -1,0 +1,11 @@
+---
+ - hosts: localhost
+   gather_facts: false
+   tasks:
+     - command: "ls /homee" # no dir, task fail, playbook stop, did not perform next task
+       register: home_out
+       ignore_errors: yes # Now if task is failed It will be ignored and second task will be performed
+     - debug: var=home_out
+     - command: "ls /tmp"
+       register: tmp_out
+     - debug: var=tmp_out

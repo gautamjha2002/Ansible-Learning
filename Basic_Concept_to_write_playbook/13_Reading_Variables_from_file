@@ -1,0 +1,7 @@
+                Reading Variables from files
+
+> In ansible we can store all our varable is differnet file and use it when needed
+
+> Differenttypes of file to store variables
+1. Yaml files
+2. Json files

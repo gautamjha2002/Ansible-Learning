@@ -1,0 +1,9 @@
+                    Reusable concept with import and include
+                      Difference between import and include 
+
+> import task are static
+> include task are dynamic
+
+import task is passes to ansible playbook while executing the ansibble playbook command
+
+include task worked when the playbook is running

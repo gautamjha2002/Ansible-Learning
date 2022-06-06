@@ -1,0 +1,16 @@
+---
+ - name: Installing and starting httpd
+   hosts: localhost
+   gather_facts: yes
+   become: yes
+   tasks:
+     - name: Installing httpd
+       yum: 
+         name: httpd
+         state: present
+       register: out
+     - name: start httpd
+       service:
+         name: httpd
+         state: started
+       when: out.changed == True

@@ -1,0 +1,18 @@
+---
+ - name: Working with Logical operators
+   hosts: localhost
+   gather_facts: false
+   vars:
+     x: 5
+     y: 7
+     p: [4,5,6]
+   tasks:
+     - debug:
+          msg:
+           - "The value of x is {{x}}, The value of y is {{y}} and p list is {{p}}"
+           - "x < y: {{x<y}} y in p: {{y in p }}"
+           # in and operation if any one output is false end result will be false
+           - "x < y and y in p: {{x<y and y in p}}" # club the above message
+           - "x < y or y in p : {{x<y or y in p}}" # if anyone is true end result is true
+           - "{{ not {{4>2}} }}"  # iverse the output
+

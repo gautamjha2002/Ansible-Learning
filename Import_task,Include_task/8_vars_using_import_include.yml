@@ -1,0 +1,10 @@
+---
+ - name: Simple play to understand import_vars and include_vars
+   hosts: all
+   gather_facts: true
+   tasks:
+      - include_vars: required_variables_for_{{ansible_os_family}}.yml
+      - debug:
+          msg: "Pkg name={{pkg}}"
+    
+    # import_vars do not work here

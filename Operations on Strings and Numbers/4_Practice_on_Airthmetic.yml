@@ -1,0 +1,12 @@
+---
+ - name : practice on airthmetic operators
+   hosts: localhost
+   gather_facts: false
+   vars_files:
+    - 4_variables.yml
+   tasks:
+   - debug:
+       msg:
+       - "The value of x is: {{x}}"
+       - "The value of y is: {{y}}"
+       - "Sum of {{x}} and {{y}} is :- {{x + y}}"

@@ -1,0 +1,13 @@
+---
+ - name: This is a simple play to understand printing variable value with debug module
+   gather_facts: false
+   hosts: all
+   tasks:
+   - name: Printing variable value using debug module
+     debug:
+       #msg: 
+        #- "The Hostname is :- {{inventory_hostname}}"
+        # or we cal also use var parameter of debug module to display variable value
+       var: inventory_hostname
+
+       

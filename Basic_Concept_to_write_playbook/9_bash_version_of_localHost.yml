@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   gather_facts: false
+   tasks:
+   - shell: "bash --version" # actually this command runs but did not show the output
+   # so we have to store output somewhere
+     register: bash_version # storing the output in bash_version variable
+   - debug: var=bash_version # displaying the value stored in bash_version 
+
+    # Setting Facts
+   - set_fact:
+       bash_ver: "{{bash_version.stdout.split('\n')[0].split()[3]}}" 
+   - debug: var=bash_ver

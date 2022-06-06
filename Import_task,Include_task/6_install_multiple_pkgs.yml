@@ -1,0 +1,17 @@
+---
+ - name: Simple play to install multiple pkgs
+   hosts: all
+   gather_facts: true
+   become: yes
+   tasks:
+     - import_tasks: 2_install_webserver_RedHat.yml
+       when: ansible_os_family=="RedHat"
+       
+     - import_tasks: 3_install_webserver_Debian.yml
+       when: ansible_os_family=="Debian"
+       
+     - include_tasks: 4_install_Java_RedHat.yml
+       when: ansible_os_family=="RedHat"
+
+     - include_tasks: 5_install_java_Debian.yml
+       when: ansible_os_family=="Debian"

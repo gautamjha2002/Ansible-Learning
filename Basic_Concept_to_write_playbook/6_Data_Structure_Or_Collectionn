@@ -1,0 +1,30 @@
+Data structures or data collections are used to store multiple data/values.
+
+> We can store multiple values using
+1. Sequence or list []
+example :-  pakgs: ['vim', 'nano', 'httpd', nginx]
+
+                    OR we can also write as 
+pakgs: 
+     - vim
+     - nano
+     - httpd
+     - nginx
+
+The list data structure is sequenced based so we can access only one value of sequence with index
+ex :- debug: var=pakgs[0]
+
+
+2. Dictionary or Map
+ web_servers: {'Linux': 'httpd', 'ubuntu': 'apache2'}
+                        OR
+web_servers:
+   'keys':  'value'
+   'Linux': 'httpd'
+   'ubuntu': 'apache2'
+
+To access only keys 
+debug: var=web_servers.keys()
+
+Display value of any key (use this if we already know the key)
+debug: var=web_servers['Linux'] # it display the value for Linux key i.e. httpd

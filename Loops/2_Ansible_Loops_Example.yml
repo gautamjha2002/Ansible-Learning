@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   gather_facts: false
+   become: yes
+   tasks:
+     - debug:
+         msg: "The current pkg is: {{item}}"
+       loop:
+        - gettext-devel
+        - openssl-devel
+        - perl-CPAN
+        - perl-devel
+        - zlib-devel
