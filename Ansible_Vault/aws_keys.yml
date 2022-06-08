@@ -1,0 +1,9 @@
+---
+ aws_access_key: AKIARNKK22DGAYNMEK7M
+ aws_secret_key: 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
+
+ # encrypt this playbook
+# ansible-vault encrypt aws_keys.yml
+
+# to run playbook related to this file we have to use option
+#      --ask-vault-passs

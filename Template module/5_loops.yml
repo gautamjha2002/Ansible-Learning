@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   gather_facts: false
+   vars: 
+      httpd_port: 8080
+      z: [3,4,5,6,7,8]
+   tasks:
+     - name: COPYING A FILE TO MANAGED NODES
+       template:
+          src: jinjaexample4.j2
+          dest: /tmp/done_with_temp4.txt
+
+

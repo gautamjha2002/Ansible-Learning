@@ -1,0 +1,49 @@
+> Ansible Vault is useful to encrypt your playbooks(including roles and variables).
+
+Why we need to encrypt playbook?
+
+We know that: Ansible is being used for automation, there is a possiblity that playbooks contain certain credentials,
+SSl certificates or other sensitive data. Saving such sensitive data as aplain text is bad idea, because one wrong commit
+to GitHub or laptop theft can cause an organization a huge loss.
+
+> So, we need a way to store secrets securely
+> Ansible Vault is the answer to this. Ansible  Vault can encrypt anything inside a YAML file, using a password of your choice
+
+To encrypt a playbook
+* ansible-vault encrypt launch_ec2_with_keys.yml
+      > set password
+      > confirm password
+
+To run a encrypted playbook
+  > we have to provide the password while running the playbook with help of --ask-vault-pass 
+  * ansible-playbook launch_ec2_with_keys.yml --ask-vault-pass
+
+
+To decrypt the playbook
+     > we have option decrypt 
+ * ansible-vault decrypt launch_ec2_with_keys.yml 
+      > provide password 
+
+Any file can be encrypted which contains variables
+
+
+We can also create a playbbok that is in encrypted format
+   > ansible-vault create encrypted.yml
+   > Give password
+   > write the playbook
+   > save it
+
+
+See the data of encrypted playbook
+  > ansible-vault view encrypted.yml 
+  > provide password
+
+Edit the encrypted playbook 
+> ansible-vault edit encrypted.yml
+
+
+Change the Ansible vault password
+    > ansible-vault rekey encrypted.yml
+    > provide old password
+    > provide new password
+    > confirm new password 

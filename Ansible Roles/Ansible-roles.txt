@@ -1,0 +1,14 @@
+                    Ansible Roles
+
+Ansible roles are used to reuse the playbook
+
+Ansible has two ways to reuse playbooks.
+> Using:
+    - include
+    - roles
+
+Compare to include role are the best way to reuse theplaybook
+Roles arevery important concept in playbook
+  - because ansible roles follows some directory structure 
+  - because of directory structure we get some advantages
+  

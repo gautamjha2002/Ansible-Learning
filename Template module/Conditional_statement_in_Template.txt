@@ -1,0 +1,21 @@
+> Simple if conditional statement:
+{% if condition %}
+logic if condition is true
+{% endif %}
+
+> If else conditional statement
+{% if condition %}
+logic if condition is true
+{% else %}
+llogic if above condition is false
+{% endif %}
+
+
+> If elif else conditional statement
+{% if condition1 %}
+logic if condition1 is true
+{% elif condition2 %}
+logic if condition2 is true
+{% else %}
+logic if all above condition is false
+{% endif %}

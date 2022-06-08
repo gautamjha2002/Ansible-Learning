@@ -1,0 +1,6 @@
+Loops:
+
+
+{% for each in list_of_values %}
+   {{each}}
+{% endfor %}

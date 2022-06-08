@@ -1,0 +1,2 @@
+ Variables in Templates
+ {{variable}} ---> to replace with variabe value
